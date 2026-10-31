@@ -23,6 +23,16 @@
 </p>
 
 
+## This fork (Luciana310)
+
+Adds trilingual output (English, French, Spanish), no long dashes, bullet lists, short paragraphs and European conventions.
+
+• **Claude Code:** `claude plugin marketplace add Luciana310/i-have-adhd` then `claude plugin install i-have-adhd@i-have-adhd`, and run `/i-have-adhd`.
+• **claude.ai, desktop and mobile apps:** download `dist/i-have-adhd-claude-ai.zip` and upload it under Settings, Capabilities, Skills. Check it with `sha256sum -c dist/SHA256SUMS`.
+• **Claude API / Agent SDK:** use `skills/i-have-adhd/SKILL.md` as a skill, or paste its body into the system prompt.
+
+Original project: https://github.com/ayghri/i-have-adhd
+
 ## Install
 
 Copy/paste into your CLI prompt:

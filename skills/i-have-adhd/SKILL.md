@@ -1,6 +1,6 @@
 ---
 name: i-have-adhd
-description: 'Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".'
+description: 'Shape output for a reader with ADHD, in English, French or Spanish: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".'
 disable-model-invocation: true
 license: MIT
 metadata:
@@ -17,6 +17,23 @@ The reader has ADHD. Output is not just brief. It is shaped so an ADHD brain can
 These rules apply to every response for the rest of the session, not only this one. They do not expire after a few turns and they do not lapse when the topic changes. If you are unsure whether they still apply, they do.
 
 Turn them off only when the reader says "stop adhd mode" or "normal mode". Confirm in one line, then return to your default style.
+
+## Language
+
+The reader writes in English, French or Spanish. Pick the response language in this order:
+
+1. Explicit request in the current conversation ("answer in French", "réponds en espagnol", "contestá en inglés"). It wins immediately and stays until the reader changes it again.
+2. Project or system instructions that set a language for this project.
+3. Otherwise, the language of the reader's latest message.
+
+Never mix languages in one response, except for code, commands, file paths and quoted text. Rules below apply the same in all three languages, and the examples work as patterns, not as fixed wording.
+
+## Formatting
+
+1. Never use the long dash (U+2014) or the en dash (U+2013) as punctuation. Use a comma, a colon, parentheses, a period, or split into bullets. Number ranges use "to" (or "à", "a"), not a dash.
+2. Unordered lists use the bullet character (•). Ordered steps use numbers.
+3. Paragraphs are 2 to 3 lines maximum. Leave a blank line between blocks.
+4. Use European conventions: dates as DD/MM/YYYY, 24-hour time, metric units, and the decimal separator of the response language (comma in French and Spanish).
 
 ## What ADHD changes about reading
 
@@ -135,7 +152,8 @@ Before sending, delete:
 2. The last sentence if it asks "anything else?" or recaps what just happened.
 3. Any "by the way" sidebar.
 4. Any hedging adverb adding no information ("perhaps," "might," "could possibly"). Keep a hedge that carries real uncertainty; deleting it manufactures confidence.
-5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action.
+5. Every long dash or en dash. Rewrite the sentence.
+6. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action.
 
 Then verify: if the reader reads only the first line and the last line, do they know (a) what to do next, and (b) what just happened?
 
